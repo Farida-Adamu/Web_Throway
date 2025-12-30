@@ -3,18 +3,15 @@
    ========================================== */
 
 :root {
-    /* Colors from moodboard */
-    --primary-color: #CC785C;      /* Deep Terracotta */
-    --secondary-color: #E8D5C4;    /* Beige */
-    --accent-color: #A86A4D;       /* Darker terracotta */
-    --text-dark: #2C2C2C;
-    --text-light: #666666;
-    --bg-light: #F0F0EB;           /* Updated background */
+    /* Colors - Simple 3 color palette */
+    --primary-color: #CC785C;      /* Terracotta accent */
+    --text-color: #3F3831;         /* Dark text */
+    --bg-light: #F0F0EB;           /* Light background */
     --white: #FFFFFF;
 
     /* Typography */
-    --font-serif: 'Lora', Georgia, serif;
-    --font-sans: 'Inter', -apple-system, sans-serif;
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -40,18 +37,19 @@
 }
 
 body {
-    font-family: var(--font-sans);
-    color: var(--text-dark);
+    font-family: var(--font-body);
+    color: var(--text-color);
     background-color: var(--bg-light);
     line-height: 1.6;
     font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
 }
 
 h1 { font-size: 2.5rem; }
@@ -61,7 +59,8 @@ h4 { font-size: 1.25rem; }
 
 p {
     margin-bottom: var(--spacing-sm);
-    color: var(--text-light);
+    color: var(--text-color);
+    opacity: 0.8;
 }
 
 a {
@@ -91,12 +90,12 @@ img {
    ========================================== */
 
 .main-header {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--secondary-color);
+    background-color: var(--bg-light);
+    border-bottom: 1px solid rgba(63, 56, 49, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: var(--spacing-md) 0;
+    padding: 1.25rem 0;
 }
 
 .nav-container {
@@ -109,9 +108,10 @@ img {
 }
 
 .logo h1 {
-    font-size: 1.75rem;
-    color: var(--text-dark);
+    font-size: 1.5rem;
+    color: var(--text-color);
     margin: 0;
+    font-weight: 500;
 }
 
 .nav-menu {
@@ -121,10 +121,9 @@ img {
 }
 
 .nav-menu a {
-    color: var(--text-dark);
+    color: var(--text-color);
     font-weight: 400;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
@@ -133,33 +132,26 @@ img {
 }
 
 /* ==========================================
-   HERO SECTION
+   PAGE HEADER (left-aligned like Anthropic)
    ========================================== */
 
-.hero {
-    background-color: #CC785C;
-    padding: var(--spacing-lg) var(--spacing-md);
-    text-align: center;
+.page-header {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+.page-header h1 {
+    font-size: 2.75rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    color: var(--white);
-    margin-bottom: var(--spacing-md);
-    font-weight: 600;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--white);
-    font-weight: 300;
-    max-width: 600px;
-    margin: 0 auto;
+.page-header p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 700px;
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 /* ==========================================
@@ -234,21 +226,14 @@ img {
    ========================================== */
 
 .blog-grid {
-    padding: var(--spacing-xxl) 0;
+    padding: 0 0 var(--spacing-xxl);
     background-color: var(--bg-light);
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-xl);
-    color: var(--text-dark);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
 }
 
 .blog-card {
@@ -277,10 +262,10 @@ img {
 }
 
 .card-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-sm);
     color: var(--white);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .card-content p {
@@ -350,68 +335,38 @@ img {
 }
 
 /* ==========================================
-   FOOTER
+   FOOTER - Simple copyright
    ========================================== */
 
-.main-footer {
-    background-color: var(--text-dark);
-    color: var(--white);
+.simple-footer {
     padding: var(--spacing-xl) 0 var(--spacing-md);
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-}
-
-.footer-col h4 {
-    color: var(--white);
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.1rem;
-}
-
-.footer-col p,
-.footer-col a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: var(--spacing-xs);
-}
-
-.footer-col a:hover {
-    color: var(--secondary-color);
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: var(--spacing-md);
     text-align: center;
+    background-color: var(--bg-light);
 }
 
-.footer-bottom p {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.85rem;
+.simple-footer p {
+    color: var(--text-color);
+    opacity: 0.6;
+    font-size: 0.9rem;
 }
 
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
 
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .page-header h1 {
+        font-size: 2rem;
     }
 
-    .hero-subtitle {
-        font-size: 1.1rem;
+    .page-header p {
+        font-size: 1rem;
     }
 
     .nav-menu {
@@ -426,20 +381,11 @@ img {
     .grid {
         grid-template-columns: 1fr;
     }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+    .page-header h1 {
+        font-size: 1.75rem;
     }
 
     .nav-menu {

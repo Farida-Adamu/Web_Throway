@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - La Ville Resiliente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            padding-bottom: var(--spacing-xxl);
+        }
+
+        .gallery-item {
+            aspect-ratio: 1/1;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .placeholder-image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Resilience</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Gallery</h1>
+                <p>Visual stories of resilience, innovation, and transformation across Abidjan.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="blog-grid">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 1</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 2</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 3</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 4</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 5</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 6</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 7</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 8</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-image">Image 9</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="simple-footer">
+        <p>La Ville Resiliente © 2026</p>
+    </footer>
+</body>
+</html>
