@@ -237,16 +237,16 @@ img {
 }
 
 .blog-card {
-    background-color: var(--white);
+    background-color: var(--bg-light);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .blog-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
@@ -336,6 +336,77 @@ img {
 .about-image {
     width: 100%;
     aspect-ratio: 1/1;
+}
+
+/* ==========================================
+   CONTACT FORM
+   ========================================== */
+
+.contact-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-light);
+}
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact-form {
+    margin-top: var(--spacing-xl);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid rgba(63, 56, 49, 0.2);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.875rem 2.5rem;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #b56a4d;
+    transform: translateY(-2px);
 }
 
 /* ==========================================

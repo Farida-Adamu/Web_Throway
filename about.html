@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Stories of Resilience</title>
+    <title>About - La Ville Resiliente</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,90 +18,50 @@
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- About Hero -->
-        <section class="hero">
-            <div class="hero-content">
-                <h2 class="hero-title">About the Project</h2>
-                <p class="hero-subtitle">Telling the stories that matter</p>
-            </div>
-        </section>
-
-        <!-- About Content -->
-        <section style="padding: 4rem 0; background-color: var(--white);">
+        <!-- Page Header -->
+        <section class="page-header">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-image">
-                        <div class="placeholder-image">Project Image</div>
-                    </div>
-                    <div class="about-text">
-                        <h2>Our Mission</h2>
-                        <p>In the heart of West Africa, Abidjan stands as a testament to human resilience and innovation. This blog chronicles the remarkable stories of communities, individuals, and organizations working towards environmental sustainability and energy access in Côte d'Ivoire's economic capital.</p>
-                        <p>Through in-depth reporting and community voices, we explore how Abidjan is navigating the challenges of rapid urbanization, climate change, and energy transition.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Focus Areas -->
-        <section style="padding: 4rem 0; background-color: var(--bg-light);">
-            <div class="container">
-                <h2 class="section-title">What We Cover</h2>
-                <div class="grid">
-                    <article class="blog-card">
-                        <div class="card-content">
-                            <span class="category">Environment</span>
-                            <h3>Environmental Sustainability</h3>
-                            <p>From lagoon restoration to urban green spaces, we document the efforts to protect and restore Abidjan's natural environment.</p>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="card-content">
-                            <span class="category">Energy</span>
-                            <h3>Energy Access & Innovation</h3>
-                            <p>Stories of communities transitioning to renewable energy and innovative solutions to energy challenges.</p>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="card-content">
-                            <span class="category">Community</span>
-                            <h3>Community Resilience</h3>
-                            <p>Highlighting the power of collective action and grassroots initiatives driving change.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team/Author Section -->
-        <section style="padding: 4rem 0; background-color: var(--white);">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <h2>Hey, I'm here</h2>
-                        <p>As a journalist and environmental advocate based in Abidjan, I've witnessed firsthand the incredible resilience of our communities. This platform is my passion - a way to amplify the voices of everyday heroes making a difference in our city.</p>
-                        <p>Through these stories, I hope to inspire action, foster dialogue, and contribute to the ongoing transformation of Abidjan into a more sustainable and equitable city.</p>
-                    </div>
-                    <div class="about-image">
-                        <div class="placeholder-image">Author Photo</div>
-                    </div>
-                </div>
+                <h1>About</h1>
+                <p>La Ville Resiliente chronicles the remarkable stories of resilience, innovation, and transformation happening across Abidjan. Through the lens of environmental sustainability and energy access, we share the voices of those building a brighter, more sustainable future.</p>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" style="padding: 4rem 0; background-color: var(--secondary-color);">
-            <div class="container" style="text-align: center;">
-                <h2 style="margin-bottom: 1rem;">Get In Touch</h2>
-                <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;">Have a story to share or want to collaborate? I'd love to hear from you.</p>
-                <a href="mailto:contact@resilience-stories.com" class="btn-primary">Contact Me</a>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <h2 style="margin-bottom: 1rem;">Get In Touch</h2>
+                    <p style="margin-bottom: 2rem;">Have a story to share or want to collaborate? We'd love to hear from you.</p>
+
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
