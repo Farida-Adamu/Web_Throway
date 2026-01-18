@@ -1,0 +1,566 @@
+/*
+Theme Name: La Ville Resiliente
+Theme URI: https://example.com
+Author: Your Name
+Author URI: https://example.com
+Description: A clean, minimal WordPress theme for La Ville Resiliente blog about environmental sustainability and energy transformation in Abidjan.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: la-ville-resiliente
+*/
+
+/* ==========================================
+   GLOBAL STYLES & VARIABLES
+   ========================================== */
+
+:root {
+    /* Colors - Simple 3 color palette */
+    --primary-color: #CC785C;      /* Terracotta accent */
+    --text-color: #3F3831;         /* Dark text */
+    --bg-light: #F0F0EB;           /* Light background */
+    --white: #FFFFFF;
+
+    /* Typography */
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 6rem;
+
+    /* Layout */
+    --max-width: 1200px;
+    --border-radius: 4px;
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #b56a4d;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ==========================================
+   HEADER & NAVIGATION
+   ========================================== */
+
+.main-header {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid rgba(63, 56, 49, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1.25rem 0;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+    margin: 0;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu .current-menu-item a {
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   PAGE HEADER
+   ========================================== */
+
+.page-header {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.page-header h1 {
+    font-size: 2.75rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.page-header p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 700px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* ==========================================
+   BLOG GRID
+   ========================================== */
+
+.blog-grid {
+    padding: 0 0 var(--spacing-xxl);
+    background-color: var(--bg-light);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.blog-card {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.blog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background-color: #CC785C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0.7;
+}
+
+.card-content {
+    padding: var(--spacing-md);
+}
+
+.category {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.card-link {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.card-link:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+/* ==========================================
+   POST/ARTICLE STYLES
+   ========================================== */
+
+.post-article {
+    background-color: var(--bg-light);
+    padding: var(--spacing-xl) 0 var(--spacing-xxl);
+}
+
+.post-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.post-meta-info {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.post-main-title {
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-color);
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.post-featured-img {
+    margin-bottom: var(--spacing-xl);
+}
+
+.post-featured-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-body {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--text-color);
+}
+
+.post-body .lead-paragraph {
+    font-size: 1.35rem;
+    line-height: 1.65;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.post-body h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.post-body h3 {
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.post-body p {
+    margin-bottom: var(--spacing-md);
+    opacity: 0.85;
+}
+
+.post-body blockquote {
+    border-left: 3px solid var(--primary-color);
+    padding-left: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.post-body ul,
+.post-body ol {
+    margin-bottom: var(--spacing-md);
+    padding-left: 1.75rem;
+}
+
+.post-body li {
+    margin-bottom: 0.75rem;
+    opacity: 0.85;
+}
+
+.post-body strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.post-body img {
+    margin: var(--spacing-lg) 0;
+    border-radius: 8px;
+}
+
+.post-footer {
+    margin-top: var(--spacing-xxl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(63, 56, 49, 0.1);
+}
+
+.back-link {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   CONTACT FORM
+   ========================================== */
+
+.contact-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-light);
+}
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact-form {
+    margin-top: var(--spacing-xl);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid rgba(63, 56, 49, 0.2);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn,
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.875rem 2.5rem;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover,
+input[type="submit"]:hover {
+    background-color: #b56a4d;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.simple-footer {
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.simple-footer p {
+    color: var(--text-color);
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: var(--spacing-md);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-main-title {
+        font-size: 2rem;
+    }
+
+    .post-body {
+        font-size: 1.05rem;
+    }
+
+    .post-body .lead-paragraph {
+        font-size: 1.2rem;
+    }
+
+    .post-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .post-body h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
