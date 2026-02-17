@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - La Ville Resiliente</title>
+    <title>Contact - La Ville Resiliente</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,63 +13,52 @@
     <header class="main-header">
         <nav class="nav-container">
             <div class="logo">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Zigzag pattern expressing connectedness -->
-                    <path d="M20 5 L28 12 L35 20 L28 28 L20 35 L12 28 L5 20 L12 12 Z"
-                          stroke="#CC785C"
-                          stroke-width="2"
-                          fill="none"
-                          stroke-linejoin="round"/>
-                    <path d="M20 12 L25 17 L28 20 L25 23 L20 28 L15 23 L12 20 L15 17 Z"
-                          stroke="#CC785C"
-                          stroke-width="1.5"
-                          fill="none"
-                          stroke-linejoin="round"/>
-                    <circle cx="20" cy="20" r="3" fill="#CC785C"/>
-                </svg>
+                <a href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5 L28 12 L35 20 L28 28 L20 35 L12 28 L5 20 L12 12 Z" stroke="#CC785C" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                        <path d="M20 12 L25 17 L28 20 L25 23 L20 28 L15 23 L12 20 L15 17 Z" stroke="#CC785C" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                        <circle cx="20" cy="20" r="3" fill="#CC785C"/>
+                    </svg>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1>About</h1>
-                <p>La Ville Resiliente chronicles the remarkable stories of resilience, innovation, and transformation happening across Abidjan. Through the lens of environmental sustainability and energy access, we share the voices of those building a brighter, more sustainable future.</p>
+                <h1>Contact</h1>
+                <p>Have a story to share or want to collaborate? We'd love to hear from you.</p>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section class="contact-section">
             <div class="container">
                 <div class="contact-content">
-                    <h2 style="margin-bottom: 1rem;">Get In Touch</h2>
-                    <p style="margin-bottom: 2rem;">Have a story to share or want to collaborate? We'd love to hear from you.</p>
-
                     <form class="contact-form" action="#" method="post">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this about?">
                         </div>
 
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" placeholder="Tell us your story or ask a question..." required></textarea>
                         </div>
 
                         <button type="submit" class="submit-btn">Send Message</button>

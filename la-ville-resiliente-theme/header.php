@@ -16,12 +16,20 @@
             </a>
         </div>
         <?php
-        wp_nav_menu(array(
-            'theme_location' => 'primary',
-            'menu_class' => 'nav-menu',
-            'container' => false,
-            'fallback_cb' => false
-        ));
+        // Try the WordPress menu first, fall back to hardcoded links
+        if (has_nav_menu('primary')) {
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'menu_class' => 'nav-menu',
+                'container' => false,
+            ));
+        } else {
         ?>
+            <ul class="nav-menu">
+                <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
+                <li><a href="<?php echo esc_url(home_url('/about/')); ?>">About</a></li>
+                <li><a href="<?php echo esc_url(home_url('/gallery/')); ?>">Gallery</a></li>
+            </ul>
+        <?php } ?>
     </nav>
 </header>
