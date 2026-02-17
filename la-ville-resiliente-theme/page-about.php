@@ -9,7 +9,6 @@ get_header(); ?>
     <section class="page-header">
         <div class="container">
             <h1><?php the_title(); ?></h1>
-            <p>The story behind La Ville Resiliente.</p>
         </div>
     </section>
 
@@ -24,16 +23,12 @@ get_header(); ?>
                         <?php the_content(); ?>
                     </div>
                 <?php else : ?>
-                    <!-- Default About Content -->
+                    <!-- Default About Content (French) -->
                     <div class="post-body">
-                        <h2>Our Mission</h2>
-                        <p>La Ville Resiliente chronicles the remarkable stories of resilience, innovation, and transformation happening across Abidjan. Through the lens of environmental sustainability and energy access, we share the voices of those building a brighter, more sustainable future for Côte d'Ivoire's economic capital.</p>
-                        <p>From community solar initiatives to lagoon restoration efforts, from urban gardens to waste-to-energy innovations — these are the stories that rarely make headlines but are quietly reshaping what it means to live in, and belong to, a city.</p>
-
-                        <h2>What We Cover</h2>
-                        <p><strong>Environment</strong> — Efforts to protect and restore Abidjan's natural ecosystems, from its lagoons to its urban green spaces.</p>
-                        <p><strong>Energy</strong> — Communities transitioning to renewable energy and the innovators making it happen.</p>
-                        <p><strong>Community</strong> — The people and movements driving change from the ground up.</p>
+                        <h2>Qui Sommes-Nous</h2>
+                        <p>La Ville Résiliente est un projet de narration dédié aux personnes, aux idées et aux initiatives qui façonnent un Abidjan plus résilient. Nous croyons que la résilience ne se résume pas à surmonter les épreuves — c'est aussi l'ingéniosité quotidienne, la solidarité et la détermination d'une ville et de ses communautés.</p>
+                        <p>Abidjan est l'une des villes les plus dynamiques d'Afrique de l'Ouest, un lieu d'énergie extraordinaire, de croissance rapide et de défis complexes.</p>
+                        <p>La Ville Résiliente est un projet éditorial indépendant. Nos récits sont reportés, écrits et produits avec soin, en privilégiant l'exactitude, la nuance et les voix des personnes au cœur de chaque histoire.</p>
                     </div>
                 <?php endif; ?>
             <?php endwhile; ?>
@@ -44,31 +39,31 @@ get_header(); ?>
     <section class="contact-section">
         <div class="container" style="max-width: 720px;">
             <div class="contact-content">
-                <h2 style="margin-bottom: var(--spacing-sm);">Get In Touch</h2>
-                <p style="margin-bottom: var(--spacing-lg);">Have a story to share or want to collaborate? We'd love to hear from you.</p>
+                <h2 style="margin-bottom: var(--spacing-sm);">Contactez-Nous</h2>
+                <p style="margin-bottom: var(--spacing-lg);">Vous avez une histoire à partager ou souhaitez collaborer ? Nous serions ravis de vous entendre.</p>
 
                 <form class="contact-form" action="#" method="post">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" placeholder="De quoi s'agit-il ?">
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell us your story or ask a question..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Partagez votre histoire ou posez-nous une question..." required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">Envoyer</button>
                 </form>
             </div>
         </div>
